@@ -1,4 +1,28 @@
-#! /bin/bash
+#! /usr/bin/perl -w
+
+use strict;
+use LWP::UserAgent;
+
+my $apikey = "1234567890";
+my $num = "999999999";
+
+my $ua = LWP::UserAgent->new;
+$ua->agent("fone-u.agi");
+
+my $req = HTTP::Request->new(
+	GET => "http://api.fone-u.com/v1/route?n=$num&key=$apikey"
+);
+
+# send request
+my $res = $ua->request($req);
+
+# check the outcome
+if ($res->is_success) {
+   print $res->decoded_content;
+} else {
+   print "Error: " . $res->status_line . "\n";
+}
+
 
 #
 # Nothing to see yet

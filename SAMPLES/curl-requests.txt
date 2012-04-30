@@ -1,0 +1,18 @@
+$ curl "http://api.fone-u.com/v1/route?n=11085551234&key=1234567890"
+"info","country",0
+"info","number","11085551234"
+
+
+$ curl "http://api.fone-u.com/v1/route?n=999999999&key=1234567890&result=xml"
+<?xml version='1.0' encoding='utf-8'?>
+<object>
+<info><country>0</country><number>999999999</number></info>
+</object>
+
+
+$ curl "http://api.fone-u.com/v1/route?n=999999999&key=1234567890&result=json"
+{ "info": { "country": 0, 
+"number": "999999999"}}
+
+
+

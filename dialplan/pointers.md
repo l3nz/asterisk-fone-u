@@ -9,3 +9,8 @@ Multiple cascaded outbound routes
 We might have to do the dialing ourselves
 
 
+
+Creating custom trunk
+ - http://www.pbxinaflash.com/community/index.php?threads/custom-trunks-for-custom-applications.862/
+
+
